@@ -22,7 +22,7 @@ class UserTests: XCTestCase {
     }
 
     func testLogin() throws {
-        let userRequestFactory = requestFactory.makeUserRequestFactory()
+        let userRequestFactory = requestFactory.makeUserRequestFatory()
         
         userRequestFactory.login(userName: "Somebody", password: "mypassword") { response in
             switch response.result {
@@ -37,7 +37,7 @@ class UserTests: XCTestCase {
     }
     
     func testLogout() throws {
-        let userRequestFactory = requestFactory.makeUserRequestFactory()
+        let userRequestFactory = requestFactory.makeUserRequestFatory()
         userRequestFactory.logout(idUser: 123) { response in
             switch response.result {
             case .success(let login):
@@ -51,7 +51,7 @@ class UserTests: XCTestCase {
     }
     
     func testRegistration() throws {
-        let userRequestFactory = requestFactory.makeUserRequestFactory()
+        let userRequestFactory = requestFactory.makeUserRequestFatory()
         let user = User(id: 0, login: "", name: "Somebody", lastname: "lastname")
         let extraUserInfo = ExtraUserInfo(id: 0, password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language")
         
@@ -68,9 +68,9 @@ class UserTests: XCTestCase {
     }
 
     func testChangeUserData() throws {
-        let userRequestFactory = requestFactory.makeUserRequestFactory()
+        let userRequestFactory = requestFactory.makeUserRequestFatory()
         let user = User(id: 123, login: "", name: "Somebody", lastname: "lastname")
-        let extraUserInfo = ExtraUserInfo(id: 0, password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language")
+        let extraUserInfo = ExtraUserInfo(id: user.id, password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "5536-7777-8888-9999", bio: "This is good! I think I will switch to another language")
         
         userRequestFactory.changeUserData(user: user, extraUserInfo: extraUserInfo) { response in
             switch response.result {
