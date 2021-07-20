@@ -1,5 +1,5 @@
 //
-//  ConcreteProduct.swift
+//  Product.swift
 //  gbshop
 //
 //  Created by Илья on 08.07.2021.
@@ -7,15 +7,17 @@
 
 import Foundation
 
-struct SingleProduct: Codable {
+struct Product: Codable {
     
-    let result: Int
+    let id: Int
     let name: String
     let price: Float
+    let description: String
     
     enum CodingKeys: String, CodingKey {
-        case result = "result"
+        case id = "id_product"
         case name = "product_name"
         case price = "product_price"
+        case description = "product_description"
     }
 }

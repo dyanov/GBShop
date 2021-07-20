@@ -1,5 +1,5 @@
 //
-//  DataRequest.swift
+//  AbstractRequestFactory.swift
 //  gbshop
 //
 //  Created by Илья on 05.07.2021.

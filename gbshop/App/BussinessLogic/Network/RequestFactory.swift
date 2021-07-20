@@ -5,7 +5,6 @@
 //  Created by Илья on 05.07.2021.
 //
 
-import Foundation
 import Alamofire
 
 class RequestFactory {
@@ -24,14 +23,14 @@ class RequestFactory {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    func makeUserRequestFactory() -> UserRequestFactory {
+    func makeUserRequestFatory() -> UserRequestFactory {
         let errorParser = makeErrorParser()
         return UserRequestFactoryRealise(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
     func makeProductRequestFatory() -> ProductRequestFactory {
         let errorParser = makeErrorParser()
-        return ProductRequestFactoryRealise(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        return ProductReqFactoryRealise(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }
 

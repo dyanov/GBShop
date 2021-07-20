@@ -5,14 +5,13 @@
 //  Created by Илья on 05.07.2021.
 //
 
-import Foundation
 import Alamofire
 
 class UserRequestFactoryRealise: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: ServerPath.localBaseUrl.rawValue)!
     
     init(
         errorParser: AbstractErrorParser,
@@ -51,7 +50,7 @@ extension UserRequestFactoryRealise {
     struct LoginRequestRouter: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "login.json"
+        let path: String = ServerPath.loginPath.rawValue
         
         let login: String
         let password: String
@@ -66,7 +65,7 @@ extension UserRequestFactoryRealise {
     struct LogoutRequestRouter: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "logout.json"
+        let path: String = ServerPath.logoutPath.rawValue
         let idUser: Int
         var parameters: Parameters? {
             return [
@@ -77,8 +76,8 @@ extension UserRequestFactoryRealise {
     
     struct RegisterRequestRouter: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .post
+        let path: String = ServerPath.registerPath.rawValue
         let user: User
         let extraUserInfo: ExtraUserInfo
         var parameters: Parameters? {
@@ -95,8 +94,8 @@ extension UserRequestFactoryRealise {
     
     struct ChangeUserDataRequestRouter: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .put
+        let path: String = ServerPath.changeUserData.rawValue
         let user: User
         let extraUserInfo: ExtraUserInfo
         var parameters: Parameters? {
@@ -106,7 +105,8 @@ extension UserRequestFactoryRealise {
                 "email": extraUserInfo.email,
                 "gender": extraUserInfo.gender,
                 "credit_card": extraUserInfo.creditCard,
-                "bio": extraUserInfo.bio
+                "bio": extraUserInfo.bio,
+                "id_user": user.id
             ]
         }
     }
