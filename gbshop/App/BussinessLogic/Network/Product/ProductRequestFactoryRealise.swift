@@ -8,12 +8,12 @@
 import Alamofire
 
 class ProductReqFactoryRealise: AbstractRequestFactory {
-    
+
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
     let baseUrl = URL(string: ServerPath.localBaseUrl.rawValue)!
-    
+
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,
@@ -24,25 +24,25 @@ class ProductReqFactoryRealise: AbstractRequestFactory {
     }
 }
 
-
 extension ProductReqFactoryRealise: ProductRequestFactory {
-    func getAllProduct(pageNumber: Int, idCategory: Int, completionHandler: @escaping (AFDataResponse<GetAllProductResponse>) -> Void) {
+    func getAllProduct(pageNumber: Int, idCategory: Int,
+                       completionHandler: @escaping (AFDataResponse<GetAllProductResponse>) -> Void) {
         let requestModel = GetAllProductRouter(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    func getProductById(idProduct: Int, completionHandler: @escaping (AFDataResponse<GetProductByIdResponse>) -> Void) {
+
+    func getProductById(idProduct: Int,
+                        completionHandler: @escaping (AFDataResponse<GetProductByIdResponse>) -> Void) {
         let requestModel = GetProductByIdRouter(baseUrl: baseUrl, idProduct: idProduct)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    
+
 }
 
 extension ProductReqFactoryRealise {
-    
+
     struct GetAllProductRouter: RequestRouter {
-        
+
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = ServerPath.getAllProduct.rawValue
@@ -55,9 +55,9 @@ extension ProductReqFactoryRealise {
             ]
         }
     }
-    
+
     struct GetProductByIdRouter: RequestRouter {
-        
+
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = ServerPath.getProductById.rawValue

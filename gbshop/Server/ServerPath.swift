@@ -35,4 +35,9 @@ enum ServerPath: String {
     case addReview = "addReview"
     case deleteReview = "deleteReview"
     
+    // MARK: - Basket paths
+    case addToBasket = "addToBasket"
+    case deleteFromBasket = "deleteFromBasket"
+    case payBasket = "payBasket"
+    
 }
