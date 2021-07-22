@@ -18,6 +18,12 @@
 		4C611E49269C92B9008546F3 /* AddReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E48269C92B9008546F3 /* AddReviewRequest.swift */; };
 		4C611E4B269C92CF008546F3 /* GetAllReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E4A269C92CF008546F3 /* GetAllReviewResponse.swift */; };
 		4C611E4D269C92F4008546F3 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E4C269C92F4008546F3 /* Review.swift */; };
+		4C61FBC726A8BEAA00F0C1E6 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBC626A8BEAA00F0C1E6 /* BasketRequestFactory.swift */; };
+		4C61FBC926A8BEC800F0C1E6 /* BasketRequestFactoryRealise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBC826A8BEC800F0C1E6 /* BasketRequestFactoryRealise.swift */; };
+		4C61FBCC26A8BFE300F0C1E6 /* GetBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBCB26A8BFE300F0C1E6 /* GetBasketResponse.swift */; };
+		4C61FBCE26A8BFFF00F0C1E6 /* ItemOfBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBCD26A8BFFF00F0C1E6 /* ItemOfBasket.swift */; };
+		4C61FBD026A8C03800F0C1E6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBCF26A8C03800F0C1E6 /* FirstViewController.swift */; };
+		4C61FBD226A8C0D100F0C1E6 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */; };
 		4C9D47CD269C7184000056A9 /* ServerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47CC269C7184000056A9 /* ServerPath.swift */; };
 		4C9D47D2269C7ACF000056A9 /* GetAllProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */; };
 		4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */; };
@@ -76,6 +82,12 @@
 		4C611E48269C92B9008546F3 /* AddReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewRequest.swift; sourceTree = "<group>"; };
 		4C611E4A269C92CF008546F3 /* GetAllReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllReviewResponse.swift; sourceTree = "<group>"; };
 		4C611E4C269C92F4008546F3 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		4C61FBC626A8BEAA00F0C1E6 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
+		4C61FBC826A8BEC800F0C1E6 /* BasketRequestFactoryRealise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactoryRealise.swift; sourceTree = "<group>"; };
+		4C61FBCB26A8BFE300F0C1E6 /* GetBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResponse.swift; sourceTree = "<group>"; };
+		4C61FBCD26A8BFFF00F0C1E6 /* ItemOfBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOfBasket.swift; sourceTree = "<group>"; };
+		4C61FBCF26A8C03800F0C1E6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
 		4C9D47CC269C7184000056A9 /* ServerPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPath.swift; sourceTree = "<group>"; };
 		4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductResponse.swift; sourceTree = "<group>"; };
 		4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByIdResponse.swift; sourceTree = "<group>"; };
@@ -160,6 +172,24 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
+		4C61FBC526A8BE8F00F0C1E6 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				4C61FBC626A8BEAA00F0C1E6 /* BasketRequestFactory.swift */,
+				4C61FBC826A8BEC800F0C1E6 /* BasketRequestFactoryRealise.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		4C61FBCA26A8BFD400F0C1E6 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				4C61FBCB26A8BFE300F0C1E6 /* GetBasketResponse.swift */,
+				4C61FBCD26A8BFFF00F0C1E6 /* ItemOfBasket.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
 		4C9D47CB269C7168000056A9 /* Server */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +268,7 @@
 				4C1DF2C326972C8A00FE3B43 /* ProductTests.swift */,
 				4CAC51AB268E010300B1BDBE /* gbshopTests.swift */,
 				4CAC51AD268E010300B1BDBE /* Info.plist */,
+				4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */,
 			);
 			path = gbshopTests;
 			sourceTree = "<group>";
@@ -275,6 +306,7 @@
 		4CAC51C6268E044600B1BDBE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				4C61FBCA26A8BFD400F0C1E6 /* Basket */,
 				4C611E47269C92AB008546F3 /* Review */,
 				4C9D47D0269C7A70000056A9 /* Product */,
 				4C9D47CF269C7A6B000056A9 /* User */,
@@ -294,6 +326,7 @@
 		4CAC51C8268E045700B1BDBE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				4C61FBCF26A8C03800F0C1E6 /* FirstViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -339,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				4CAC51DE2693145600B1BDBE /* RequestFactory.swift */,
+				4C61FBC526A8BE8F00F0C1E6 /* Basket */,
 				4CAC51E32693496700B1BDBE /* User */,
 				4CFDC02A26972E710033344B /* Product */,
 				4C611E42269C9044008546F3 /* Review */,
@@ -624,20 +658,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C61FBCC26A8BFE300F0C1E6 /* GetBasketResponse.swift in Sources */,
 				4CFDC02E26972EE10033344B /* ProductRequestFactory.swift in Sources */,
 				4CAC51DF2693145600B1BDBE /* RequestFactory.swift in Sources */,
 				4CAC51EB26934A7600B1BDBE /* StandartResponse.swift in Sources */,
 				4C9D47D2269C7ACF000056A9 /* GetAllProductResponse.swift in Sources */,
+				4C61FBC926A8BEC800F0C1E6 /* BasketRequestFactoryRealise.swift in Sources */,
 				4C1DF2C826972D0F00FE3B43 /* SingleProduct.swift in Sources */,
 				4CAC51CE26930D4100B1BDBE /* AbstractErrorParser.swift in Sources */,
 				4CAC51D62693122F00B1BDBE /* LoginResponse.swift in Sources */,
 				4C611E46269C90A3008546F3 /* ReviewRequestFactory.swift in Sources */,
+				4C61FBC726A8BEAA00F0C1E6 /* BasketRequestFactory.swift in Sources */,
 				4CAC51D226930EFF00B1BDBE /* AbstractRequestFactory.swift in Sources */,
 				4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */,
 				4C611E4B269C92CF008546F3 /* GetAllReviewResponse.swift in Sources */,
 				4CFDC02C26972EC20033344B /* ProductRequestFactoryRealise.swift in Sources */,
 				4C1DF2C626972CD200FE3B43 /* Product.swift in Sources */,
 				4CAC51D42693117200B1BDBE /* RequestRouter.swift in Sources */,
+				4C61FBCE26A8BFFF00F0C1E6 /* ItemOfBasket.swift in Sources */,
 				4C611E49269C92B9008546F3 /* AddReviewRequest.swift in Sources */,
 				4CAC51E7269349C800B1BDBE /* UserRequestFactoryRealise.swift in Sources */,
 				4CAC51D82693125200B1BDBE /* User.swift in Sources */,
@@ -648,6 +686,7 @@
 				4C611E4D269C92F4008546F3 /* Review.swift in Sources */,
 				4CAC5197268E010200B1BDBE /* SceneDelegate.swift in Sources */,
 				4C9D47CD269C7184000056A9 /* ServerPath.swift in Sources */,
+				4C61FBD026A8C03800F0C1E6 /* FirstViewController.swift in Sources */,
 				4CAC51E12693326300B1BDBE /* CustomDecodableSerializer.swift in Sources */,
 				4CAC51D026930D6300B1BDBE /* ErrorParser.swift in Sources */,
 			);
@@ -658,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1DF2C026972BB800FE3B43 /* UserTests.swift in Sources */,
+				4C61FBD226A8C0D100F0C1E6 /* BasketTests.swift in Sources */,
 				4C1DF2C426972C8A00FE3B43 /* ProductTests.swift in Sources */,
 				4C1DF2C226972C1B00FE3B43 /* ResponseCodableTests.swift in Sources */,
 				4CAC51AC268E010300B1BDBE /* gbshopTests.swift in Sources */,
