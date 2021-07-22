@@ -13,6 +13,11 @@
 		4C1DF2C426972C8A00FE3B43 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF2C326972C8A00FE3B43 /* ProductTests.swift */; };
 		4C1DF2C626972CD200FE3B43 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF2C526972CD200FE3B43 /* Product.swift */; };
 		4C1DF2C826972D0F00FE3B43 /* SingleProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF2C726972D0F00FE3B43 /* SingleProduct.swift */; };
+		4C611E44269C906D008546F3 /* ReviewRequestFactoryRealise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E43269C906D008546F3 /* ReviewRequestFactoryRealise.swift */; };
+		4C611E46269C90A3008546F3 /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E45269C90A3008546F3 /* ReviewRequestFactory.swift */; };
+		4C611E49269C92B9008546F3 /* AddReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E48269C92B9008546F3 /* AddReviewRequest.swift */; };
+		4C611E4B269C92CF008546F3 /* GetAllReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E4A269C92CF008546F3 /* GetAllReviewResponse.swift */; };
+		4C611E4D269C92F4008546F3 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C611E4C269C92F4008546F3 /* Review.swift */; };
 		4C9D47CD269C7184000056A9 /* ServerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47CC269C7184000056A9 /* ServerPath.swift */; };
 		4C9D47D2269C7ACF000056A9 /* GetAllProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */; };
 		4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */; };
@@ -66,6 +71,11 @@
 		4C1DF2C326972C8A00FE3B43 /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		4C1DF2C526972CD200FE3B43 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4C1DF2C726972D0F00FE3B43 /* SingleProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProduct.swift; sourceTree = "<group>"; };
+		4C611E43269C906D008546F3 /* ReviewRequestFactoryRealise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewRequestFactoryRealise.swift; path = ../../../../../../../Documents/ReviewRequestFactoryRealise.swift; sourceTree = "<group>"; };
+		4C611E45269C90A3008546F3 /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
+		4C611E48269C92B9008546F3 /* AddReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewRequest.swift; sourceTree = "<group>"; };
+		4C611E4A269C92CF008546F3 /* GetAllReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllReviewResponse.swift; sourceTree = "<group>"; };
+		4C611E4C269C92F4008546F3 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		4C9D47CC269C7184000056A9 /* ServerPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerPath.swift; sourceTree = "<group>"; };
 		4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductResponse.swift; sourceTree = "<group>"; };
 		4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByIdResponse.swift; sourceTree = "<group>"; };
@@ -131,6 +141,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C611E42269C9044008546F3 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				4C611E43269C906D008546F3 /* ReviewRequestFactoryRealise.swift */,
+				4C611E45269C90A3008546F3 /* ReviewRequestFactory.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		4C611E47269C92AB008546F3 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				4C611E48269C92B9008546F3 /* AddReviewRequest.swift */,
+				4C611E4A269C92CF008546F3 /* GetAllReviewResponse.swift */,
+				4C611E4C269C92F4008546F3 /* Review.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		4C9D47CB269C7168000056A9 /* Server */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +275,7 @@
 		4CAC51C6268E044600B1BDBE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				4C611E47269C92AB008546F3 /* Review */,
 				4C9D47D0269C7A70000056A9 /* Product */,
 				4C9D47CF269C7A6B000056A9 /* User */,
 				4C9D47CE269C7A65000056A9 /* Auth */,
@@ -311,6 +341,7 @@
 				4CAC51DE2693145600B1BDBE /* RequestFactory.swift */,
 				4CAC51E32693496700B1BDBE /* User */,
 				4CFDC02A26972E710033344B /* Product */,
+				4C611E42269C9044008546F3 /* Review */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -600,16 +631,21 @@
 				4C1DF2C826972D0F00FE3B43 /* SingleProduct.swift in Sources */,
 				4CAC51CE26930D4100B1BDBE /* AbstractErrorParser.swift in Sources */,
 				4CAC51D62693122F00B1BDBE /* LoginResponse.swift in Sources */,
+				4C611E46269C90A3008546F3 /* ReviewRequestFactory.swift in Sources */,
 				4CAC51D226930EFF00B1BDBE /* AbstractRequestFactory.swift in Sources */,
 				4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */,
+				4C611E4B269C92CF008546F3 /* GetAllReviewResponse.swift in Sources */,
 				4CFDC02C26972EC20033344B /* ProductRequestFactoryRealise.swift in Sources */,
 				4C1DF2C626972CD200FE3B43 /* Product.swift in Sources */,
 				4CAC51D42693117200B1BDBE /* RequestRouter.swift in Sources */,
+				4C611E49269C92B9008546F3 /* AddReviewRequest.swift in Sources */,
 				4CAC51E7269349C800B1BDBE /* UserRequestFactoryRealise.swift in Sources */,
 				4CAC51D82693125200B1BDBE /* User.swift in Sources */,
 				4CAC51E926934A3900B1BDBE /* ExtraUserInfo.swift in Sources */,
 				4CAC51E52693499400B1BDBE /* UserRequestFactory.swift in Sources */,
+				4C611E44269C906D008546F3 /* ReviewRequestFactoryRealise.swift in Sources */,
 				4CAC5195268E010200B1BDBE /* AppDelegate.swift in Sources */,
+				4C611E4D269C92F4008546F3 /* Review.swift in Sources */,
 				4CAC5197268E010200B1BDBE /* SceneDelegate.swift in Sources */,
 				4C9D47CD269C7184000056A9 /* ServerPath.swift in Sources */,
 				4CAC51E12693326300B1BDBE /* CustomDecodableSerializer.swift in Sources */,
