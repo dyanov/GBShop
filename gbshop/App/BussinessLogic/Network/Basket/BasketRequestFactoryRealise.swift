@@ -2,10 +2,9 @@
 //  BasketRequestFactoryRealise.swift
 //  gbshop
 //
-//  Created by Илья on 21.07.2021.
+//  Created by Илья on 29.07.2021.
 //
 
-import Foundation
 import Alamofire
 
 class BasketRequestFactoryRealise: AbstractRequestFactory {
@@ -93,3 +92,4 @@ extension BasketRequestFactoryRealise {
     }
 
 }
+
