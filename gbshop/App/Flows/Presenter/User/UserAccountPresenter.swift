@@ -23,6 +23,10 @@ class UserAccountPresenter {
 }
 
 extension UserAccountPresenter: UserAccountViewToPresenterProtocol {
+    func startMoveToAllProductsView() {
+        self.router.moveToAllProductsView()
+    }
+
     func startGetDataForGenderPicker() {
         self.interactor.getDataForGenderPicker()
     }

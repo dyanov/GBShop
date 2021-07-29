@@ -39,9 +39,17 @@ class UserAccountViewController: UIViewController {
         self.userAccountView?.contentView.editDataBarButton.target = self
         self.userAccountView?.contentView.editDataBarButton.action = #selector(editDataBarButtonAction)
         self.navigationItem.rightBarButtonItem = self.userAccountView?.contentView.editDataBarButton
-        self.userAccountView?.contentView.saveUserDataButton.addTarget(self,
-                                                                       action: #selector(saveUserDataButtonAction),
-                                                                       for: .touchUpInside)
+        self.userAccountView?.contentView
+            .saveUserDataButton
+            .addTarget(self,action: #selector(saveUserDataButtonAction),for: .touchUpInside)
+
+        self.userAccountView?.contentView
+            .toProductsViewButton
+            .addTarget(self, action: #selector(toProductsViewButtonAction), for: .touchUpInside)
+    }
+
+    @objc func  toProductsViewButtonAction() {
+        self.presenter.startMoveToAllProductsView()
     }
 
     @objc func saveUserDataButtonAction() {
@@ -103,4 +111,3 @@ extension UserAccountViewController: UIPickerViewDelegate, UIPickerViewDataSourc
        return row
     }
 }
-
