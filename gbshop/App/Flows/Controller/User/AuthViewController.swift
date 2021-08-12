@@ -25,6 +25,25 @@ class AuthViewController: UIViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        NotificationCenter.default.addObserver(self.authView as Any,
+                                               selector: #selector(self.authView?.keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+
+        NotificationCenter.default.addObserver(self.authView as Any,
+                                               selector: #selector(self.authView?.keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
     private func setupButton() {
         self.authView?.contentView
             .loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)

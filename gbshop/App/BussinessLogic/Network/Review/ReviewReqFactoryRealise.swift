@@ -12,7 +12,7 @@ class ReviewReqFactoryRealise: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: ServerPath.localBaseUrl.rawValue)!
+    let baseUrl = URL(string: ServerPath.herokuBaseUrl.rawValue)!
 
     init(
         errorParser: AbstractErrorParser,
