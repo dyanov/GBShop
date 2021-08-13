@@ -6,12 +6,19 @@
 //
 
 import Alamofire
+import Firebase
 
 class UserRequestFactoryRealise: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: ServerPath.herokuBaseUrl.rawValue)!
+    var baseUrl: URL {
+        guard let baseUrl = URL(string: ServerPath.herokuBaseUrl.rawValue) else {
+            Crashlytics.crashlytics().log("bad URL")
+            fatalError("bad URL")
+        }
+        return baseUrl
+    }
 
     init(
         errorParser: AbstractErrorParser,
@@ -116,3 +123,4 @@ extension UserRequestFactoryRealise {
     }
 
 }
+

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAnalytics
 
 class UserAccountInteractor: UserAccountPresenterToInteractorProtocol {
 
@@ -23,14 +24,15 @@ class UserAccountInteractor: UserAccountPresenterToInteractorProtocol {
     }
 
     func saveUserData(user: User, extraUserInfo: ExtraUserInfo) {
-
-        let userDataIsEmpty = serviceFactory.makeUserService().userDataIsEmpty(user: user)
+        let userFactory = serviceFactory.makeUserService()
+        let userDataIsEmpty = userFactory.userDataIsEmpty(user: user)
         let extraUserInfoDataIsEmpty = serviceFactory
             .makeUserService()
             .extraUserInfoDataIsEmpty(extraUserInfo: extraUserInfo)
 
         guard !userDataIsEmpty && !extraUserInfoDataIsEmpty else {
             self.presenter?.startShowMessage(text: "There is empty field(s)", messageType: .error)
+            userFactory.logEventChangeData(success: false, content: "There is empty field(s)")
             return
         }
 
@@ -40,8 +42,10 @@ class UserAccountInteractor: UserAccountPresenterToInteractorProtocol {
                 switch response.result {
                 case .success(_):
                     self?.presenter?.startShowMessage(text: "User data was saved", messageType: .message)
+                    userFactory.logEventChangeData(success: true, content: nil)
                 case .failure(let error):
                     self?.presenter?.startShowMessage(text: "\(error)", messageType: .error)
+                    userFactory.logEventChangeData(success: false, content: "Server error")
                 }
             }
         }
