@@ -9,5 +9,6 @@ import UIKit
 
 enum MarginSettingsEnum: CGFloat {
     case betweenTextField = 20
-    case betweenButton = 10
+    case betweenButton, intoHorizontalStack, baseTopAnchor = 10
+    case heightCell = 100
 }

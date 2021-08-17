@@ -8,6 +8,7 @@
 protocol UserAccountViewToPresenterProtocol: AnyObject {
     func startGetDataForGenderPicker()
     func startSaveUserData(user: User, extraUserInfo: ExtraUserInfo)
+    func startMoveToAllProductsView()
 
 }
 
@@ -16,7 +17,7 @@ protocol UserAccountPresenterToViewProtocol: AnyObject {
 }
 
 protocol UserAccountPresenterToRouterProtocol: PresenterToRouterProtocol,AnyObject {
-
+    func moveToAllProductsView()
 }
 
 protocol UserAccountPresenterToInteractorProtocol: AnyObject {

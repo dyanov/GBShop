@@ -45,4 +45,17 @@ class FlowFactory {
 
         return userAccountViewController
     }
+
+    func makeAllProductFlow() -> AllProductTableController {
+        let router = AllProductRouter()
+        let interactor = AllProductInteractor()
+        let presenter = AllProductPresenter(interactor: interactor, router: router)
+        let allProductTableController = AllProductTableController(presenter: presenter)
+        router.setController(controller: allProductTableController)
+        interactor.setPresenter(presenter: presenter)
+        presenter.setController(controller: allProductTableController)
+
+        return allProductTableController
+    }
 }
+
