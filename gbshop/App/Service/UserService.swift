@@ -5,6 +5,8 @@
 //  Created by Илья on 29.07.2021.
 //
 
+import FirebaseAnalytics
+
 class UserService {
 
     func authDataIsEmpty(login: String, password: String) -> Bool {
@@ -37,5 +39,22 @@ class UserService {
             return false
         }
     }
+
+    func logEventLogin(success: Bool, content: String?) {
+        Analytics.logEvent(AnalyticsEventLogin,
+                           parameters:  [
+                            AnalyticsParameterSuccess: success,
+                            AnalyticsParameterContent: content ?? ""
+                          ])
+    }
+
+    func logEventChangeData(success: Bool, content: String?) {
+        Analytics.logEvent(CustomAnalyticsEvent.ghangeUserData.rawValue,
+                           parameters:  [
+                            AnalyticsParameterSuccess: success,
+                            AnalyticsParameterContent: content ?? ""
+                          ])
+    }
 }
+
 

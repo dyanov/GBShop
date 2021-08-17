@@ -9,6 +9,8 @@ target 'gbshop' do
 
 pod 'Alamofire', '~> 5.4'
 pod 'SwiftLint'
+pod 'Firebase/Crashlytics'
+pod 'Firebase/Analytics'
 
   target 'gbshopTests' do
     inherit! :search_paths

@@ -32,6 +32,9 @@
 		4C61FBD226A8C0D100F0C1E6 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */; };
 		4C9D47D2269C7ACF000056A9 /* GetAllProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */; };
 		4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */; };
+		4CA603BF26C5A6B10056FF49 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA603BE26C5A6B10056FF49 /* ProductService.swift */; };
+		4CA603C126C5A6E30056FF49 /* CustomAnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA603C026C5A6E30056FF49 /* CustomAnalyticsEvent.swift */; };
+		4CA603C326C5AAB10056FF49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CA603C226C5AAB10056FF49 /* GoogleService-Info.plist */; };
 		4CAC5195268E010200B1BDBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC5194268E010200B1BDBE /* AppDelegate.swift */; };
 		4CAC5197268E010200B1BDBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC5196268E010200B1BDBE /* SceneDelegate.swift */; };
 		4CAC519E268E010300B1BDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC519D268E010300B1BDBE /* Assets.xcassets */; };
@@ -130,6 +133,9 @@
 		4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
 		4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductResponse.swift; sourceTree = "<group>"; };
 		4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByIdResponse.swift; sourceTree = "<group>"; };
+		4CA603BE26C5A6B10056FF49 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		4CA603C026C5A6E30056FF49 /* CustomAnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnalyticsEvent.swift; sourceTree = "<group>"; };
+		4CA603C226C5AAB10056FF49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CAC5191268E010200B1BDBE /* gbshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gbshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAC5194268E010200B1BDBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CAC5196268E010200B1BDBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 		4CAC5193268E010200B1BDBE /* gbshop */ = {
 			isa = PBXGroup;
 			children = (
+				4CA603C226C5AAB10056FF49 /* GoogleService-Info.plist */,
 				4CAC51C4268E043100B1BDBE /* App */,
 				4CAC51C9268E046C00B1BDBE /* Core */,
 				4CAC51CA268E047000B1BDBE /* Resources */,
@@ -376,11 +383,11 @@
 		4CAC51C4268E043100B1BDBE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4CAC5194268E010200B1BDBE /* AppDelegate.swift */,
+				4CAC5196268E010200B1BDBE /* SceneDelegate.swift */,
 				4CDDF64726B2909D0019CD28 /* Setting */,
 				4CDDF64426B290760019CD28 /* Service */,
 				4CDDF60A26B28B180019CD28 /* Factory */,
-				4CAC5194268E010200B1BDBE /* AppDelegate.swift */,
-				4CAC5196268E010200B1BDBE /* SceneDelegate.swift */,
 				4CAC51C5268E043A00B1BDBE /* BussinessLogic */,
 				4CAC51C6268E044600B1BDBE /* Entity */,
 				4CAC51C7268E044F00B1BDBE /* Assembly */,
@@ -614,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDDF64526B290880019CD28 /* UserService.swift */,
+				4CA603BE26C5A6B10056FF49 /* ProductService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -625,6 +633,7 @@
 				4CDDF64B26B290D20019CD28 /* MarginSettingsEnum.swift */,
 				4CDDF64D26B290E40019CD28 /* MessageTypeEnum.swift */,
 				4CDDF64F26B2910C0019CD28 /* ServerPath.swift */,
+				4CA603C026C5A6E30056FF49 /* CustomAnalyticsEvent.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -711,6 +720,7 @@
 				4CAC518E268E010200B1BDBE /* Frameworks */,
 				4CAC518F268E010200B1BDBE /* Resources */,
 				AF3F605755921D85C7E35594 /* [CP] Embed Pods Frameworks */,
+				4CA603C426C5B0820056FF49 /* Firebase */,
 			);
 			buildRules = (
 			);
@@ -809,6 +819,7 @@
 			files = (
 				4CAC51A1268E010300B1BDBE /* LaunchScreen.storyboard in Resources */,
 				4CAC519E268E010300B1BDBE /* Assets.xcassets in Resources */,
+				4CA603C326C5AAB10056FF49 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,6 +861,26 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4CA603C426C5B0820056FF49 /* Firebase */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}\n",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)\n",
+			);
+			name = Firebase;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		688F8107FBC8E69BA6D6D108 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -955,6 +986,7 @@
 				4CAC51D62693122F00B1BDBE /* LoginResponse.swift in Sources */,
 				4CAC51D226930EFF00B1BDBE /* AbstractRequestFactory.swift in Sources */,
 				4CDDF62826B28DA40019CD28 /* UserAccountViewToPresenterProtocol.swift in Sources */,
+				4CA603C126C5A6E30056FF49 /* CustomAnalyticsEvent.swift in Sources */,
 				4CDDF62426B28D5B0019CD28 /* PresenterToRouterProtocol.swift in Sources */,
 				4C4362F626B2A10E002A7590 /* AllProductTableController.swift in Sources */,
 				4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */,
@@ -969,6 +1001,7 @@
 				4C61FBCE26A8BFFF00F0C1E6 /* ItemOfBasket.swift in Sources */,
 				4C4362F926B2A142002A7590 /* AllProductViewToPresenterProtocol.swift in Sources */,
 				4CDDF62A26B28DCB0019CD28 /* AuthInteractor.swift in Sources */,
+				4CA603BF26C5A6B10056FF49 /* ProductService.swift in Sources */,
 				4C43630C26B2A304002A7590 /* ProductCell.swift in Sources */,
 				4C611E49269C92B9008546F3 /* AddReviewRequest.swift in Sources */,
 				4CDDF64626B290880019CD28 /* UserService.swift in Sources */,
@@ -1174,6 +1207,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 97G4293L9V;
 				INFOPLIST_FILE = gbshop/Enviroments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1194,6 +1228,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 97G4293L9V;
 				INFOPLIST_FILE = gbshop/Enviroments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

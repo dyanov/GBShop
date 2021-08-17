@@ -30,7 +30,7 @@ class BaseViewWithScroll<ContentType: UIView>: UIView {
     }
 
     func setup() {
-        self.backgroundColor = .yellow
+        self.backgroundColor = .systemGray4
         self.addSubview(scrollView)
         scrollView.addSubview(contentView)
         NSLayoutConstraint.activate([
