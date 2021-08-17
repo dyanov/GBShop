@@ -1,8 +1,8 @@
 //
-//  ProductRequestFactoryRealise.swift
+//  ProductReqFactoryRealise.swift
 //  gbshop
 //
-//  Created by Илья on 08.07.2021.
+//  Created by Илья on 29.07.2021.
 //
 
 import Alamofire

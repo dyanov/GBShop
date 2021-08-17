@@ -2,9 +2,10 @@
 //  UserRequestFactoryRealise.swift
 //  gbshop
 //
-//  Created by Илья on 05.07.2021.
+//  Created by Илья on 29.07.2021.
 //
 
+import Foundation
 import Alamofire
 
 class UserRequestFactoryRealise: AbstractRequestFactory {
@@ -12,7 +13,7 @@ class UserRequestFactoryRealise: AbstractRequestFactory {
     let sessionManager: Session
     let queue: DispatchQueue
     let baseUrl = URL(string: ServerPath.localBaseUrl.rawValue)!
-    
+
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,
@@ -24,34 +25,38 @@ class UserRequestFactoryRealise: AbstractRequestFactory {
 }
 
 extension UserRequestFactoryRealise: UserRequestFactory {
-    func changeUserData(user: User, extraUserInfo: ExtraUserInfo, completionHandler: @escaping (AFDataResponse<StandartResponse>) -> Void) {
-        let requestModel = ChangeUserDataRequestRouter(baseUrl: baseUrl, user: user, extraUserInfo: extraUserInfo)
+    func changeUserData(user: User, extraUserInfo: ExtraUserInfo,
+                        completionHandler: @escaping (AFDataResponse<StandartResponse>) -> Void) {
+        let requestModel = ChangeUserDataRequestRouter(baseUrl: baseUrl, user: user,
+                                                       extraUserInfo: extraUserInfo)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    func registration(user: User, extraUserInfo: ExtraUserInfo, completionHandler: @escaping (AFDataResponse<StandartResponse>) -> Void) {
+
+    func registration(user: User, extraUserInfo: ExtraUserInfo,
+                      completionHandler: @escaping (AFDataResponse<StandartResponse>) -> Void) {
         let requestModel = RegisterRequestRouter(baseUrl: baseUrl, user: user, extraUserInfo: extraUserInfo)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
+
     func logout(idUser: Int, completionHandler: @escaping (AFDataResponse<StandartResponse>) -> Void) {
         let requestModel = LogoutRequestRouter(baseUrl: baseUrl, idUser: idUser)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    func login(userName: String, password: String, completionHandler: @escaping (AFDataResponse<LoginResponse>) -> Void) {
+
+    func login(userName: String, password: String,
+               completionHandler: @escaping (AFDataResponse<LoginResponse>) -> Void) {
         let requestModel = LoginRequestRouter(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension UserRequestFactoryRealise {
-    
+
     struct LoginRequestRouter: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = ServerPath.loginPath.rawValue
-        
+
         let login: String
         let password: String
         var parameters: Parameters? {
@@ -61,7 +66,7 @@ extension UserRequestFactoryRealise {
             ]
         }
     }
-    
+
     struct LogoutRequestRouter: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -73,7 +78,7 @@ extension UserRequestFactoryRealise {
             ]
         }
     }
-    
+
     struct RegisterRequestRouter: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
@@ -91,7 +96,7 @@ extension UserRequestFactoryRealise {
             ]
         }
     }
-    
+
     struct ChangeUserDataRequestRouter: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .put
@@ -110,5 +115,6 @@ extension UserRequestFactoryRealise {
             ]
         }
     }
-    
+
 }
+
