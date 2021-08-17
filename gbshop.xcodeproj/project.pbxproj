@@ -30,6 +30,7 @@
 		4C61FBCC26A8BFE300F0C1E6 /* GetBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBCB26A8BFE300F0C1E6 /* GetBasketResponse.swift */; };
 		4C61FBCE26A8BFFF00F0C1E6 /* ItemOfBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBCD26A8BFFF00F0C1E6 /* ItemOfBasket.swift */; };
 		4C61FBD226A8C0D100F0C1E6 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */; };
+		4C685E6A26CC54A5005657B9 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C685E6926CC54A5005657B9 /* SnapshotHelper.swift */; };
 		4C9D47D2269C7ACF000056A9 /* GetAllProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */; };
 		4C9D47D4269C7AE6000056A9 /* GetProductByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */; };
 		4CA603BF26C5A6B10056FF49 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA603BE26C5A6B10056FF49 /* ProductService.swift */; };
@@ -131,6 +132,7 @@
 		4C61FBCB26A8BFE300F0C1E6 /* GetBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResponse.swift; sourceTree = "<group>"; };
 		4C61FBCD26A8BFFF00F0C1E6 /* ItemOfBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOfBasket.swift; sourceTree = "<group>"; };
 		4C61FBD126A8C0D100F0C1E6 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
+		4C685E6926CC54A5005657B9 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		4C9D47D1269C7ACF000056A9 /* GetAllProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProductResponse.swift; sourceTree = "<group>"; };
 		4C9D47D3269C7AE6000056A9 /* GetProductByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByIdResponse.swift; sourceTree = "<group>"; };
 		4CA603BE26C5A6B10056FF49 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 		4CAC51B5268E010300B1BDBE /* gbshopUITests */ = {
 			isa = PBXGroup;
 			children = (
+				4C685E6926CC54A5005657B9 /* SnapshotHelper.swift */,
 				4CAC51B6268E010300B1BDBE /* gbshopUITests.swift */,
 				4CAC51B8268E010300B1BDBE /* Info.plist */,
 				4C42DFD026C59CC300A31597 /* UserServiceUITest.swift */,
@@ -1054,6 +1057,7 @@
 				4C42DFD126C59CC300A31597 /* UserServiceUITest.swift in Sources */,
 				4CAC51B7268E010300B1BDBE /* gbshopUITests.swift in Sources */,
 				4C42DFD326C59CEE00A31597 /* UserUITests.swift in Sources */,
+				4C685E6A26CC54A5005657B9 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,6 +1211,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 97G4293L9V;
 				INFOPLIST_FILE = gbshop/Enviroments/Info.plist;
@@ -1218,6 +1223,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1228,6 +1234,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 97G4293L9V;
 				INFOPLIST_FILE = gbshop/Enviroments/Info.plist;
@@ -1239,6 +1246,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

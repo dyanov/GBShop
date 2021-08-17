@@ -28,7 +28,7 @@ class UserAccountInteractor: UserAccountPresenterToInteractorProtocol {
         let userDataIsEmpty = userFactory.userDataIsEmpty(user: user)
         let extraUserInfoDataIsEmpty = serviceFactory
             .makeUserService()
-            .extraUserInfoDataIsEmpty(extraUserInfo: extraUserInfo)
+            .extraUserInfoDataHasEmptyFields(extraUserInfo: extraUserInfo)
 
         guard !userDataIsEmpty && !extraUserInfoDataIsEmpty else {
             self.presenter?.startShowMessage(text: "There is empty field(s)", messageType: .error)
