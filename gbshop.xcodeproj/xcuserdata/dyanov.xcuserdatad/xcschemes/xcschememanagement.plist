@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SnapshotGBShopUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 		<key>gbshop.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>16</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4CAC5190268E010200B1BDBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CAC51A6268E010300B1BDBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CAC51B1268E010300B1BDBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

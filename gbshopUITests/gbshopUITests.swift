@@ -8,6 +8,40 @@
 import XCTest
 
 class gbshopUITests: XCTestCase {
+    
+    let app = XCUIApplication()
+    
+    override func setUp() {
+        super.setUp()
+        
+        continueAfterFailure = false
+
+        setupSnapshot(app)
+
+        app.launch()
+    }
+    
+    func testExample() {
+        
+        snapshot("LoginScreen")
+        
+        app.textFields["username"].tap()
+        app.textFields["username"].typeText("test")
+        let passwordSecureTextField = app.secureTextFields["password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("test")
+        app.buttons["Log In"].tap()
+        
+        app.staticTexts["Welcome!"].tap()
+        app.staticTexts["John Doe"].tap()
+
+        snapshot("WelcomeScreen")
+
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Product"].tap()
+
+        snapshot("ProductScreen")
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,15 +54,6 @@ class gbshopUITests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testLaunchPerformance() throws {

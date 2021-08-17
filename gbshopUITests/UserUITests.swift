@@ -56,12 +56,19 @@ class UserUITests: XCTestCase {
             return true
             
         })
-        // Диалоги находятся в другом потоке, поэтому дадим им некоторое время для синхронизации
+
         RunLoop.current.run(until: Date(timeInterval: 10, since: Date()))
         print(app.debugDescription)
-        // Чтобы снова взаимодействовать с приложением
         app.tap()
         removeUIInterruptionMonitor(token)
+        
+        //solution from https://developer.apple.com/forums/thread/662387
+        app.tap()
+            let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+            let allowBtn = springboard.buttons["Ok"]
+            if allowBtn.waitForExistence(timeout: 2) {
+                allowBtn.tap()
+            }
     
     }
 

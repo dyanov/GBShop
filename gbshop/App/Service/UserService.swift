@@ -28,7 +28,7 @@ class UserService {
         }
     }
 
-    func extraUserInfoDataIsEmpty(extraUserInfo: ExtraUserInfo) -> Bool {
+    func extraUserInfoDataHasEmptyFields(extraUserInfo: ExtraUserInfo) -> Bool {
         if extraUserInfo.bio.isEmpty ||
             extraUserInfo.creditCard.isEmpty ||
             extraUserInfo.email.isEmpty ||
@@ -49,7 +49,7 @@ class UserService {
     }
 
     func logEventChangeData(success: Bool, content: String?) {
-        Analytics.logEvent(CustomAnalyticsEvent.ghangeUserData.rawValue,
+        Analytics.logEvent(CustomAnalyticsEvent.сhangeUserData.rawValue,
                            parameters:  [
                             AnalyticsParameterSuccess: success,
                             AnalyticsParameterContent: content ?? ""
